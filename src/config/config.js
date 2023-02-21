@@ -12,15 +12,31 @@ import { UserManager } from "oidc-client";
 // } = process.env;
 
 export const config = {
-  authority: "https://erdmsapiauth.persolqa.com/",
+  authority: "https://erdmsapiauth.persolqa.com/oauth/",
   client_id: "spa",
   redirect_uri: "http://127.0.0.1:5173",
   client_secret: "",
-  scope:"reachmeapi offline_access email profile openid",
-  response_type:"implicit",
+  scope:"reachmeapi email profile openid offline_access",
+  response_type:"code",
   response_mode: "query",
   
 };
+
+ //authority: "https://erdmsapiauth.persolqa.com/oauth/",  client_id: "spa",  redirect_uri: "http://127.0.0.1:5173",  client_secret: "",  scope:"reachmeapi email profile openid",  response_type:"code",  response_mode: "query",
+
+// authority: "https://erdmsapiauth.persolqa.com/oauth/",
+
+// client_id: "spa",
+
+// redirect_uri: "http://127.0.0.1:5173",
+
+// client_secret: "",
+
+// scope:"reachmeapi email profile openid",
+
+// response_type:"code",
+
+// response_mode: "query",
 
 
 export const userManager = new UserManager(config);

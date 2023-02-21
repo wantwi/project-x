@@ -8,7 +8,15 @@ const Header = () => {
 LOGO
       </div>
       <div className='nav'>
-        <button onClick={userLogin}>Login</button>
+        <div className='menu-links'>
+        <div>Home</div>
+        <div>Event</div>
+        <div>Project</div>
+        </div>
+       
+        {/* <button onClick={userLogin}>Login</button> */}
+
+
       </div>
     </header>
   )

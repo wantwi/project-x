@@ -16,17 +16,18 @@ const DonationAmount = ({ id }) => {
   };
 
   const postDonationPayment = async (reference) => {
-    
+ 
+   
     try {
       const response = await customAxios.post("/Donations", {
         donorId: "",
         donorName: "",
         donorLocation: "",
         campaignId: id,
-        donatedDate: Date.now(),
+        donatedDate: new Date().toJSON(),
         remarks: "",
         amount: paymentAmount.current,
-        currencyId: "",
+        currencyId: "0A0F1B90-0980-482E-A533-E6337DA5D295",
         paymentReferenceId: reference,
       });
 
@@ -43,7 +44,7 @@ const DonationAmount = ({ id }) => {
     setAmt("")
   };
 
-  const onClose = () => {
+  const onClose = () => { 
     console.log("closed");
     paymentAmount.current = null
     setAmt("")
@@ -76,8 +77,8 @@ const DonationAmount = ({ id }) => {
 
  
   return (
-    <div className="" style={{ width: "70%", margin: "0 auto" }}>
-      <h3 className="mb-3">Donate</h3>
+    <div className="amt-card">
+      <h3 className="mb-3 ">Donate</h3>
       <div className="d-box">
         <p>GHS 20</p>
         <PaystackHookExample amount={20} />

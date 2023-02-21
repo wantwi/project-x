@@ -78,10 +78,10 @@ const HomePage = () => {
       <section className="about-section section-pad">
         <Container 
         style={{ width: "80%", margin: "0 auto" }}
-        className="section-pad"
+        className="section-pad "
         fluid>
-          <Row>
-            <Col xl="8" lg="8" sm="12" xs="12">
+          <Row className="tab-container">
+            <Col xl="8" lg="8" sm="12" xs="12" className="w-100">
               <div className="ab-section-title">
                 <span>What we Do?</span>
                 <h2>We Are In A Mission To Help The Helpless</h2>
